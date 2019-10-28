@@ -30,5 +30,46 @@ template<typename... Params>
   * To the left of the name of a parameter, it declares a parameter pack.
   * To the right of a template or function call argument, it unpacks the parameter packs into separate arguments.
   
-# 9. `constexpr` (since C++11)
+## 9. `constexpr` (since C++11)
 * The constexpr specifier declares that it is possible to evaluate the value of the function or variable at compile time. 
+
+## 10. `auto`
+* Automatic deduction of value types.
+
+## 11. Return type deduction for normal functions
+* Example: 
+```
+template<class T, class U>
+auto add(T t, U u) { return t + u; }
+```
+
+## Usage of `Callable` (`operator()`) Example: printing a map
+```
+(TODO)
+```
+
+## 12. Lambda
+* Allowed us to create unnamed function objects which may or may not have captures.
+* Examples(TODO)
+
+## 13. Generic and Variadic Lambdas
+* Examples (TODO)
+
+## 14. Range based for loop
+* Iterate all elements in a container. Works with anything with `begin()` and `end()`, and C style arrays.
+* Examples (TODO)
+
+## 15. Structure bindings 
+(TODO)
+
+## 16. Concepts
+
+## 17. `std::string_view`
+
+## 18. Text formatting
+
+## How to print a map in `C++20`?
+
+## 19. Ranges
+
+## 20. Class Template Argument Deduction
