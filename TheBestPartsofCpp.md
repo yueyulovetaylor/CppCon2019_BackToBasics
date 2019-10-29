@@ -79,3 +79,7 @@ auto add(T t, U u) { return t + u; }
 ## 22. Guaranteed Copy Elision
 
 ## 23. Defaulted and Deleted Functions
+
+## 24. `std::unique_ptr` and `std::make_unique`
+
+## 25. Fold Expression
