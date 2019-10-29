@@ -73,3 +73,9 @@ auto add(T t, U u) { return t + u; }
 ## 19. Ranges
 
 ## 20. Class Template Argument Deduction
+
+## 21. RValue references
+
+## 22. Guaranteed Copy Elision
+
+## 23. Defaulted and Deleted Functions
