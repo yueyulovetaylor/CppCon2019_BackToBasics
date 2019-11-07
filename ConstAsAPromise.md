@@ -40,4 +40,4 @@ Given `CV1` and `CV2`, `CV2` is more cv-qualifier than `CV1` if `CV2` has **ever
   ```
   * Conclusion: Declare a pointer parameter as **"pointer to const"** if the function should not alter the point to object
   * Top Level CV-Qualifiers suggestions: Avoid using `const` at top level of parameter declarations. 
-    For example: It is meaningless to define `void *memcpy(void *d, void const *s, size_t const n)`
+    For example: It is meaningless to define `void *const memcpy(void *const d, void const *const s, size_t const n)`. Defining const to primitive types might not be useful, because we are basically pass these in by value. So in this case, what we actually want is `void * memcpy(void * d, void const * s, size_t  n)`
