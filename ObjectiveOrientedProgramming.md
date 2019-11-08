@@ -60,5 +60,27 @@
     * Step 2: Make bases abstract (via pure virtual functions) and protected assignment operators
     * Step 3: Make leaf classes concrete, public assignment operators and **final**
   
+  ### Use the non-virtual interface (NVI) idiom
+    * Example:
+    ```
+    class NVILogger {
+    public:
+      void logMessage(const char * msg) {
+        /*Prepare*/
+        DoLogMsg(msg);
+        /*Cleanup*/
+      }
 
+      void ~NVILogger() = default;
+
+    private:
+      virtual void DoLogMsg(const char * msg) = 0;
+    };
+    ```
+    * Client interface: This is the public non-virtual interface
+    * Subclass interface: This is the private interface, which can have any combination virtual and non-virtual methods.
+    
+
+    
 ## Building (code-level) Guidelines
+
