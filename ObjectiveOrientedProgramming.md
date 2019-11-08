@@ -61,7 +61,7 @@
     * Step 3: Make leaf classes concrete, public assignment operators and **final**
   
   ### Use the non-virtual interface (NVI) idiom
-    * Example:
+  * Example:
     ```
     class NVILogger {
     public:
@@ -77,10 +77,25 @@
       virtual void DoLogMsg(const char * msg) = 0;
     };
     ```
-    * Client interface: This is the public non-virtual interface
-    * Subclass interface: This is the private interface, which can have any combination virtual and non-virtual methods.
-    
+  * Client interface: This is the public non-virtual interface
+  * Subclass interface: This is the private interface, which can have any combination virtual and non-virtual methods.
 
-    
 ## Building (code-level) Guidelines
 
+### Always make base class destructor virtual
+* Counterexample:
+
+  <img src="./img/oop_img3.png" height=50% width=50%>
+  <img src="./img/oop_img4.png" height=50% width=50%>
+
+### Using `override` keyword for overriden functions
+* This will force compiler to verify overrides has the exact same signatures as interface defined in base.
+
+### Do not mix overloading and overriding
+* Function overloading rules when considering scope
+  * 1. look for override in scope if found, collect all signatures and stop
+  * 2. Not found, go to outer scope and repeat 1.
+  * So, **overloading does not happen across scopes**
+  * Example:
+
+    <img src="./img/oop_img5.png" height=50% width=50%>
