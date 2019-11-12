@@ -99,3 +99,19 @@
   * Example:
 
     <img src="./img/oop_img5.png" height=50% width=50%>
+
+## Do not specify default values on function overrides
+  * Default parameter values are determined by compiler at compile time and inserted into paramter list at compile time.
+  * Actual function invoked and determined at runtime. So passed default value will be statically determined as **default parameter in the base class's function declaration**.
+
+## Do not call virtual functions in constructors and destructors
+
+## Use dynamic rather than static casts for downcasting, but avoid casting by refactoring where possible
+  * **Upcasting**: Casting a derived type pointer or reference to a pointer or reference up the hierarchy (to a base type).
+    * Always safe
+  * **Downcasting**: Casting a base type pointer or reference to a pointer or reference down the hierarchy (to a derived type).
+    * Problematic: base type cannot be substituted for a derived type object
+    * Solution: using conditional dynamic casting and do correct error handling.
+    * Dynamic_cast failure: 
+      * If the cast fails and new-type is a pointer type, it returns a null pointer of that type. 
+      * If the cast fails and new-type is a reference type, it throws an exception that matches a handler of type `std::bad_cast`.
