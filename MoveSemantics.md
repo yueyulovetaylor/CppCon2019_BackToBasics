@@ -88,7 +88,7 @@
 
   * `std::forward`: **conditionally** casts its input into an rvalue reference
 
-    <img src="./img/move_img12.png" height=50% width=50%>
+    <img src="./img/MoveSemantics/move_img12.png" height=50% width=50%>
 
     * If the given value is a `lvalue` (in the case below `Widget &` type), cast it to an `lvalue` reference. 
 
