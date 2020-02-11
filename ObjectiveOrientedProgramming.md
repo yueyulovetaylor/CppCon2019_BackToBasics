@@ -49,11 +49,11 @@
   * Example of best practice: 
     * Original design
 
-      <img src="./img/oop_img1.png" height=60% width=60%>
+      <img src="./img/ObjectiveOrientedProgramming/oop_img1.png" height=60% width=60%>
 
     * Improved Design
 
-      <img src="./img/oop_img2.png" height=60% width=60%>
+      <img src="./img/ObjectiveOrientedProgramming/oop_img2.png" height=60% width=60%>
   
   * Scott Myers steps:
     * Step 1: Make each class in the hierarchy either a base-only or a leaf-only
@@ -85,8 +85,8 @@
 ### Always make base class destructor virtual
 * Counterexample:
 
-  <img src="./img/oop_img3.png" height=50% width=50%>
-  <img src="./img/oop_img4.png" height=50% width=50%>
+  <img src="./img/ObjectiveOrientedProgramming/oop_img3.png" height=50% width=50%>
+  <img src="./img/ObjectiveOrientedProgramming/oop_img4.png" height=50% width=50%>
 
 ### Using `override` keyword for overriden functions
 * This will force compiler to verify overrides has the exact same signatures as interface defined in base.
@@ -98,7 +98,7 @@
   * So, **overloading does not happen across scopes**
   * Example:
 
-    <img src="./img/oop_img5.png" height=50% width=50%>
+    <img src="./img/ObjectiveOrientedProgramming/oop_img5.png" height=50% width=50%>
 
 ## Do not specify default values on function overrides
   * Default parameter values are determined by compiler at compile time and inserted into paramter list at compile time.
